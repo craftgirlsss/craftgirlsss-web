@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Craftgirlsss</title>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- FontAwesome Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar Start-->
+    <nav class="navbar">
+      <!-- Title Brand -->
+      <a href="#" class="navbar-logo">Craftgirlsss</a>
+
+      <!-- Menus-Navbar -->
+      <div class="navbar-nav">
+        <a href="#">Beranda</a>
+        <a href="#menu">Produk</a>
+        <a href="#download">Download</a><a href="#contact">Kontak</a>
+      </div>
+
+      <!-- Shop Icons -->
+      <div class="navbar-extra">
+        <a href="#search"><i data-feather="search"></i></a>
+        <a href="#shopping"><i data-feather="shopping-cart"></i></a>
+        <a href="#menu" id="hamburger-menu"><i data-feather="menu"></i></a>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Javascript SideBar -->
+    <script>
+      //Toggle class active
+      const navbarNav = document.querySelector(".navbar-nav");
+
+      //ketika humberger menu di klik
+      document.querySelector("#hamburger-menu").onclick = () => {
+        navbarNav.classList.toggle("active");
+      };
+
+      //klik diluar navbar untuk menghilangkan menu
+      const hamburger = document.querySelector("#hamburger-menu");
+      document.addEventListener("click", function (e) {
+        if (!hamburger.contains(e.target) && !navbarNav.contains(e.target)) {
+          navbarNav.classList.remove("active");
+        }
+      });
+    </script>
+
+    <!-- Feather Icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
